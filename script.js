@@ -11,10 +11,19 @@ const lookup = {
 };
 
 function rot13(encodedStr){
-   let decodedArr = []; // Your Result goes here
+   let decodedArr = []; // Your Result goes here(store all decreptedWord)
   // Only change code below this line
 
-  return ;//return decodedArr
+  var words = encodedStr.split(" ");
+  for(var index = 0; index < words.length; index++){
+	  var encryptedword = words[i];  //we need to convert it back in decrypted word
+	  var decreptedWord = "";
+	  for( var j= 0; j<encryptedword.length; j++){
+		  decreptedWord += lookup[encryptedword.charAt(j)];//you can get this encrypteddata from this lookup thats why lookeup is here
+	  }
+	  decodedArr.push(decreptedWord);
+  }
+  return decodedArr.join(" ") ;//return decodedArr //join is using to pass all words in  a single string of a decode
 }
 
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
